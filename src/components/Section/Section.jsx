@@ -6,8 +6,8 @@ export const Section = ({ title, children }) => {
   return (
     <SectionWrap>
       <SectionTitle>{title}</SectionTitle>
-      {children} /* передає дочірні елементи в компоненти */
-    </SectionWrap>
+      {children}
+      </SectionWrap>
   );
 };
 
