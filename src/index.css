@@ -1,13 +1,65 @@
 @import-normalize; /* bring in normalize.css styles */
 
 body {
-  background: linear-gradient(to bottom, #1c2748, #5d5959);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-
+  height: 100vh;
   margin: 0;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  background: linear-gradient(to right, #fffb00, #0000ff);
+  animation: gradient-pulse 4s ease-in-out infinite;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
-
   color: white;
 }
+
+@keyframes gradient-pulse {
+  0% {
+    background-size: 100% 100%;
+  }
+
+  50% {
+    background-size: 150% 150%;
+  }
+
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+
+button {
+  /* width: 200px; */
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  /* margin: 20px; */
+  /* height: 50px; */
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+
+  background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+
+button:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* button:active{
+  color: blue;
+} */
